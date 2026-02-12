@@ -13,9 +13,9 @@ class Settings(BaseSettings):
     """Application settings"""
     
     # EPS API credentials
-    TOKEN: str = ""
-    USER_ID: str = ""
-    PASSWORD: str = ""
+    TOKEN: str = os.getenv("TOKEN")
+    USER_ID: str = os.getenv("USER_ID"),
+    PASSWORD: str = os.getenv("PASSWORD"),
     
     # API Configuration
     EPS_BASE_URL: str = "http://api.epspl.co.in/api/Client/TrackingDetail"
